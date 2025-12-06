@@ -1,0 +1,89 @@
+---
+title: "MDX Basics Guide"
+date: "2025-12-06"
+excerpt: "Learn how to write blog posts with MDX - markdown with superpowers"
+coverImage: "/images/blog/image.jpg"
+author: "Arham Gill"
+---
+
+
+
+MDX is Markdown + JSX. You can use regular Markdown syntax plus React components!
+
+## Headings
+
+Use `#` for headings:
+- `#` H1 (use once per post)
+- `##` H2
+- `###` H3
+
+## Text Formatting
+
+You can use:
+- **Bold text** with `**text**`
+- *Italic text* with `*text*`
+- `Inline code` with backticks
+
+## Lists
+
+### Unordered Lists
+- Item 1
+- Item 2
+  - Nested item
+  - Another nested item
+
+### Ordered Lists
+1. First item
+2. Second item
+3. Third item
+4. Yes
+
+## Images
+
+### Method 1: Markdown Syntax (Simple)
+
+
+![Example Image](/images/blog/nextjs-cover.png)
+
+### Method 2: Using Next.js Image Component (Better)
+For this, you'd need to configure MDX components in your blog post page. But for basic usage, Markdown images work fine!
+
+## Code Blocks
+
+Inline code: `const x = 5;`
+
+Code block:
+```javascript
+function hello() {
+  console.log("Hello World!");
+}
+```
+
+```python
+def greet(name):
+    print(f"Hello {name}!")
+```
+
+## Links
+
+[Visit my homepage](/)
+
+[Check out Next.js](https://nextjs.org)
+
+## Quotes
+
+> This is a blockquote.
+> It can span multiple lines.
+
+## Horizontal Rule
+
+---
+
+## Tips for Your Blog
+
+1. **Save images** in `public/images/blog/`
+2. **Reference them** as `/images/blog/filename.jpg`
+3. **Keep it simple** - MDX supports all standard Markdown
+4. **Preview** your posts by visiting `/blog/your-slug`
+
+Happy blogging! 🎉
