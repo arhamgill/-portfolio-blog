@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 interface PageProps {
   params: Promise<{
@@ -31,6 +32,32 @@ export async function generateStaticParams() {
     .map((filename) => ({
       slug: filename.replace(".mdx", ""),
     }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const { frontmatter } = await getPost(slug);
+
+  return {
+    title: frontmatter.title,
+    description: frontmatter.excerpt,
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.excerpt,
+      images: [frontmatter.coverImage],
+      type: "article",
+      publishedTime: frontmatter.date,
+      authors: [frontmatter.author],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: frontmatter.title,
+      description: frontmatter.excerpt,
+      images: [frontmatter.coverImage],
+    },
+  };
 }
 
 export default async function BlogPost({ params }: PageProps) {

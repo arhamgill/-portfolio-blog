@@ -3,6 +3,18 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog - Arham Gill",
+  description:
+    "Read my latest thoughts on web development, technology, and more.",
+  openGraph: {
+    title: "Blog - Arham Gill",
+    description:
+      "Read my latest thoughts on web development, technology, and more.",
+  },
+};
 
 interface BlogPost {
   slug: string;
