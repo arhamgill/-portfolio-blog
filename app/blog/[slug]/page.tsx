@@ -71,7 +71,7 @@ export default async function BlogPost({ params }: PageProps) {
         href="/blog"
         className="text-blue-600 hover:underline mb-8 inline-block"
       >
-        ← Back to Blog
+        Back to Blog
       </Link>
 
       {/* Header */}
@@ -91,7 +91,7 @@ export default async function BlogPost({ params }: PageProps) {
       </header>
 
       {/* Cover Image */}
-      <div className="relative aspect-video mb-8 rounded-lg overflow-hidden">
+      <div className="relative aspect-video mb-8 overflow-hidden w-3/5">
         <Image
           src={frontmatter.coverImage}
           alt={frontmatter.title}
