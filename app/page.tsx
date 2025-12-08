@@ -142,12 +142,12 @@ export default function Home() {
 
         {/* About Me Section */}
         <div className="max-w-2xl mx-auto">
-          <p className="text-base text-gray-300 leading-relaxed text-left bg-slate-800 p-6 rounded-lg">
+          <p className="text-base text-gray-300 leading-relaxed text-justify md:text-left bg-slate-800 p-6 rounded-lg">
             I am a computer science graduate and a full-stack web developer
-            experienced in modern web technologies. I’m an intelligent
+            experienced in modern web technologies. I'm an intelligent
             programmer with strong communication skills, and I can quickly learn
-            and adapt to new tools and concepts. I’m also very good at debugging
-            and solving technical problems, which helps me deliver reliable and
+            and adapt to new tools and concepts. I'm very good at debugging and
+            solving technical problems, which helps me deliver reliable and
             efficient work in any project I take on.
           </p>
         </div>
@@ -328,42 +328,43 @@ export default function Home() {
             <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
               <div className="relative w-full h-56">
                 <Image
-                  src="/images/blog/nextjs-cover.png"
+                  src="/images/projects/project-1.webp"
                   alt="Project 1"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3">
-                  E-Commerce Platform
+                  Manhattan Suites NYC
                 </h3>
                 <p className="text-gray-300 mb-4 text-sm">
-                  A full-stack e-commerce solution with payment integration,
-                  admin dashboard, and inventory management system.
+                  An interactive and clean UI where you can browse Manhattan
+                  hotels, fethed from Guesty API, get a quotation and send
+                  booking requests.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-400 text-slate-900">
-                    React
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-white text-slate-900">
+                    Next.js
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-600 text-white">
-                    Node.js
+                    Guesty
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500 text-white">
-                    MongoDB
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-500 text-white">
+                    Supabase
                   </span>
                 </div>
                 <div className="flex gap-4 text-sm">
-                  <a
+                  {/* <a
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                   >
                     GitHub
-                  </a>
+                  </a> */}
                   <a
-                    href="#"
+                    href="https://manhattansuites.nyc/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
@@ -378,34 +379,37 @@ export default function Home() {
             <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
               <div className="relative w-full h-56">
                 <Image
-                  src="/images/blog/image.jpg"
+                  src="/images/projects/project-2.webp"
                   alt="Project 2"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3">
-                  Task Management App
+                  Ecommerce Platform
                 </h3>
                 <p className="text-gray-300 mb-4 text-sm">
-                  A collaborative task management tool with real-time updates,
-                  team features, and project tracking capabilities.
+                  An ecommerce web app powered by Next.js, Clerk, Sanity and
+                  Stripe using Zustand for real-time state management.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-4">
                   <span className="px-3 py-1 rounded-full text-xs font-medium bg-white text-slate-900">
                     Next.js
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500 text-white">
-                    TypeScript
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-violet-500 text-white">
+                    Stripe
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-500 text-white">
+                    Sanity
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-600 text-white">
-                    PostgreSQL
+                    Clerk
                   </span>
                 </div>
                 <div className="flex gap-4 text-sm">
                   <a
-                    href="#"
+                    href="https://github.com/arhamgill/ecommerce_sanity_website"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
@@ -413,7 +417,7 @@ export default function Home() {
                     GitHub
                   </a>
                   <a
-                    href="#"
+                    href="https://ecommerce-sanity-seven-iota.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
@@ -428,54 +432,54 @@ export default function Home() {
             <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
               <div className="relative w-full h-56">
                 <Image
-                  src="/images/blog/image.jpg"
+                  src="/images/projects/project-3.webp"
                   alt="Project 3"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3">
-                  Social Media Dashboard
+                  Real-time chtat app
                 </h3>
                 <p className="text-gray-300 mb-4 text-sm">
-                  Analytics dashboard for social media metrics with data
-                  visualization and performance tracking.
+                  A real-time chat app build for a software house, powered by
+                  the MERN stack, Socket.io , Cloudinary and MongoDB.
                 </p>
                 <div className="flex gap-2 flex-wrap mb-4">
                   <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-400 text-slate-900">
-                    React
+                    MERN
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-600 text-white">
-                    Django
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-600 text-white">
+                    Socket.io
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-orange-500 text-white">
-                    AWS
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500 text-white">
+                    Cloudinary
                   </span>
                 </div>
                 <div className="flex gap-4 text-sm">
                   <a
-                    href="#"
+                    href="https://github.com/arhamgill/stoneage-com-chatapp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                   >
                     GitHub
                   </a>
-                  <a
+                  {/* <a
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                   >
                     Live Demo
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
 
             {/* Project 4 */}
-            <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
+            {/* <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
               <div className="relative w-full h-56">
                 <Image
                   src="/images/blog/image.jpg"
@@ -522,7 +526,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -597,13 +601,13 @@ export default function Home() {
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-gray-400 text-sm">LinkedIn</p>
                   <a
                     href="https://www.linkedin.com/in/arhamgilldev/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-gray-300"
+                    className="text-white hover:text-gray-300 break-words text-sm md:text-base"
                   >
                     linkedin.com/in/arhamgilldev
                   </a>
