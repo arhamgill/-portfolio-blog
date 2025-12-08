@@ -81,7 +81,7 @@ export default function Home() {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-6 justify-center md:justify-start">
+            <div className="flex gap-4 md:gap-6 justify-center md:justify-start">
               {/* GitHub */}
               <Link
                 href="https://github.com/arhamgill"
@@ -91,7 +91,7 @@ export default function Home() {
                 aria-label="GitHub"
               >
                 <svg
-                  className="w-14 h-14"
+                  className="w-10 h-10 md:w-14 md:h-14"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -112,7 +112,7 @@ export default function Home() {
                 aria-label="LinkedIn"
               >
                 <svg
-                  className="w-11 h-11"
+                  className="w-9 h-9 md:w-11 md:h-11"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -129,7 +129,7 @@ export default function Home() {
                 aria-label="Twitter"
               >
                 <svg
-                  className="w-11 h-11"
+                  className="w-9 h-9 md:w-11 md:h-11"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -143,11 +143,12 @@ export default function Home() {
         {/* About Me Section */}
         <div className="max-w-2xl mx-auto">
           <p className="text-base text-gray-300 leading-relaxed text-left bg-slate-800 p-6 rounded-lg">
-            I'm a passionate web developer with experience in building modern,
-            responsive web applications. I specialize in creating seamless user
-            experiences using cutting-edge technologies and best practices. With
-            a strong foundation in both frontend and backend development, I
-            bring ideas to life through clean, efficient, and scalable code.
+            I am a computer science graduate and a full-stack web developer
+            experienced in modern web technologies. I’m an intelligent
+            programmer with strong communication skills, and I can quickly learn
+            and adapt to new tools and concepts. I’m also very good at debugging
+            and solving technical problems, which helps me deliver reliable and
+            efficient work in any project I take on.
           </p>
         </div>
       </div>
@@ -323,44 +324,203 @@ export default function Home() {
             Projects
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-colors">
-              <h3 className="text-xl font-bold text-white mb-3">
-                E-Commerce Platform
-              </h3>
-              <p className="text-gray-300 mb-4">
-                A full-stack e-commerce solution with payment integration and
-                admin dashboard.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="text-xs bg-slate-700 text-gray-300 px-3 py-1 rounded-full">
-                  React
-                </span>
-                <span className="text-xs bg-slate-700 text-gray-300 px-3 py-1 rounded-full">
-                  Node.js
-                </span>
-                <span className="text-xs bg-slate-700 text-gray-300 px-3 py-1 rounded-full">
-                  MongoDB
-                </span>
+            {/* Project 1 */}
+            <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/images/blog/nextjs-cover.png"
+                  alt="Project 1"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  E-Commerce Platform
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm">
+                  A full-stack e-commerce solution with payment integration,
+                  admin dashboard, and inventory management system.
+                </p>
+                <div className="flex gap-2 flex-wrap mb-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-400 text-slate-900">
+                    React
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-600 text-white">
+                    Node.js
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500 text-white">
+                    MongoDB
+                  </span>
+                </div>
+                <div className="flex gap-4 text-sm">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-colors">
-              <h3 className="text-xl font-bold text-white mb-3">
-                Task Management App
-              </h3>
-              <p className="text-gray-300 mb-4">
-                A collaborative task management tool with real-time updates and
-                team features.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="text-xs bg-slate-700 text-gray-300 px-3 py-1 rounded-full">
-                  Next.js
-                </span>
-                <span className="text-xs bg-slate-700 text-gray-300 px-3 py-1 rounded-full">
-                  TypeScript
-                </span>
-                <span className="text-xs bg-slate-700 text-gray-300 px-3 py-1 rounded-full">
-                  Tailwind
-                </span>
+
+            {/* Project 2 */}
+            <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/images/blog/image.jpg"
+                  alt="Project 2"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Task Management App
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm">
+                  A collaborative task management tool with real-time updates,
+                  team features, and project tracking capabilities.
+                </p>
+                <div className="flex gap-2 flex-wrap mb-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-white text-slate-900">
+                    Next.js
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500 text-white">
+                    TypeScript
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-600 text-white">
+                    PostgreSQL
+                  </span>
+                </div>
+                <div className="flex gap-4 text-sm">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 3 */}
+            <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/images/blog/image.jpg"
+                  alt="Project 3"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Social Media Dashboard
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Analytics dashboard for social media metrics with data
+                  visualization and performance tracking.
+                </p>
+                <div className="flex gap-2 flex-wrap mb-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-400 text-slate-900">
+                    React
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-600 text-white">
+                    Django
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-orange-500 text-white">
+                    AWS
+                  </span>
+                </div>
+                <div className="flex gap-4 text-sm">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 4 */}
+            <div className="bg-slate-800 rounded-lg overflow-hidden transition-colors">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/images/blog/image.jpg"
+                  alt="Project 4"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Weather Forecast App
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Real-time weather application with location-based forecasts
+                  and interactive maps integration.
+                </p>
+                <div className="flex gap-2 flex-wrap mb-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-white text-slate-900">
+                    Next.js
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500 text-white">
+                    TypeScript
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-violet-500 text-white">
+                    API
+                  </span>
+                </div>
+                <div className="flex gap-4 text-sm">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+                  >
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
           </div>

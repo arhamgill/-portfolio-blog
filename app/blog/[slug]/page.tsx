@@ -65,46 +65,50 @@ export default async function BlogPost({ params }: PageProps) {
   const { frontmatter, content } = await getPost(slug);
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-12">
-      {/* Back Link */}
-      <Link
-        href="/blog"
-        className="text-blue-600 hover:underline mb-8 inline-block"
-      >
-        Back to Blog
-      </Link>
+    <div className="bg-slate-900 min-h-screen">
+      <article className="max-w-3xl mx-auto px-4 py-12">
+        {/* Back Link */}
+        <Link
+          href="/blog"
+          className="text-blue-400 hover:text-blue-300 hover:underline mb-8 inline-block"
+        >
+          Back to Blog
+        </Link>
 
-      {/* Header */}
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">{frontmatter.title}</h1>
-        <div className="flex items-center gap-3 text-gray-600 text-sm">
-          <time>
-            {new Date(frontmatter.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
-          <span className="text-gray-400">|</span>
-          <span>By {frontmatter.author}</span>
+        {/* Header */}
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold mb-4 text-white">
+            {frontmatter.title}
+          </h1>
+          <div className="flex items-center gap-3 text-gray-400 text-sm">
+            <time>
+              {new Date(frontmatter.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+            <span className="text-gray-500">|</span>
+            <span>By {frontmatter.author}</span>
+          </div>
+        </header>
+
+        {/* Cover Image */}
+        <div className="relative aspect-video mb-8 overflow-hidden w-3/5">
+          <Image
+            src={frontmatter.coverImage}
+            alt={frontmatter.title}
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
-      </header>
 
-      {/* Cover Image */}
-      <div className="relative aspect-video mb-8 overflow-hidden w-3/5">
-        <Image
-          src={frontmatter.coverImage}
-          alt={frontmatter.title}
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
-      {/* Content */}
-      <div className="prose prose-lg max-w-none">
-        <MDXRemote source={content} />
-      </div>
-    </article>
+        {/* Content */}
+        <div className="prose prose-lg prose-invert max-w-none">
+          <MDXRemote source={content} />
+        </div>
+      </article>
+    </div>
   );
 }

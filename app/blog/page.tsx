@@ -48,21 +48,19 @@ export default function BlogPage() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="bg-slate-900 text-white py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+    <div className="bg-slate-900 min-h-screen">
+      <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
+        {/* Hero Section */}
+        <div className="mb-32">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">
             Blog by Arham Gill
           </h1>
           <p className="text-lg md:text-xl text-slate-300">
             Web Development | Artificial Intelligence
           </p>
         </div>
-      </section>
 
-      {/* Blog Posts List */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Blog Posts List */}
         <div className="space-y-12">
           {posts.map((post) => (
             <article
@@ -82,22 +80,22 @@ export default function BlogPage() {
 
               {/* Content */}
               <div className="flex-grow">
-                <time className="text-sm text-gray-600">
+                <time className="text-sm text-gray-400">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
                   })}
                 </time>
-                <h2 className="text-xl md:text-2xl font-bold mt-2 mb-3">
+                <h2 className="text-xl md:text-2xl font-bold mt-2 mb-3 text-white">
                   {post.title}
                 </h2>
-                <p className="text-gray-700 mb-4 text-sm md:text-base">
+                <p className="text-gray-300 mb-4 text-sm md:text-base">
                   {post.excerpt}
                 </p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-block text-blue-600 hover:underline"
+                  className="inline-block text-blue-400 hover:text-blue-300 hover:underline"
                 >
                   Read more
                 </Link>
@@ -106,6 +104,6 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
