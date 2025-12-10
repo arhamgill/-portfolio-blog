@@ -25,6 +25,12 @@ async function getPost(slug: string) {
 
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), "content/blog");
+
+  // Check if directory exists
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
+
   const filenames = fs.readdirSync(postsDirectory);
 
   return filenames

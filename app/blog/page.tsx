@@ -42,7 +42,12 @@ interface BlogPost {
 
 export default function BlogPage() {
   const postsDirectory = path.join(process.cwd(), "content/blog");
-  const filenames = fs.readdirSync(postsDirectory);
+
+  // Check if directory exists and handle empty directory
+  let filenames: string[] = [];
+  if (fs.existsSync(postsDirectory)) {
+    filenames = fs.readdirSync(postsDirectory);
+  }
 
   const posts: BlogPost[] = filenames
     .filter((filename) => filename.endsWith(".mdx"))
