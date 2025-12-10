@@ -6,13 +6,28 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog - Arham Gill",
+  title: "Blog",
   description:
-    "Read my latest thoughts on web development, technology, and more.",
+    "Read my latest thoughts on web development, React, Next.js, TypeScript, and modern web technologies.",
+  keywords: [
+    "Web Development Blog",
+    "React Tutorial",
+    "Next.js Guide",
+    "JavaScript",
+    "TypeScript",
+    "Full Stack Development",
+  ],
   openGraph: {
     title: "Blog - Arham Gill",
     description:
-      "Read my latest thoughts on web development, technology, and more.",
+      "Read my latest thoughts on web development, React, Next.js, TypeScript, and modern web technologies.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog - Arham Gill",
+    description:
+      "Read my latest thoughts on web development, React, Next.js, TypeScript, and modern web technologies.",
   },
 };
 
@@ -62,46 +77,57 @@ export default function BlogPage() {
 
         {/* Blog Posts List */}
         <div className="space-y-12">
-          {posts.map((post) => (
-            <article
-              key={post.slug}
-              className="flex flex-col md:flex-row gap-6 md:gap-8 items-start"
-            >
-              {/* Cover Image - Fixed width, maintains aspect ratio */}
-              <div className="flex-shrink-0 w-full md:w-64">
-                <Image
-                  src={post.coverImage}
-                  alt={post.title}
-                  width={256}
-                  height={144}
-                  className="w-full h-auto"
-                />
-              </div>
+          {posts.length === 0 ? (
+            <div className="text-center py-20">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-gray-400 text-lg">
+                New blog posts will be published here soon. Stay tuned!
+              </p>
+            </div>
+          ) : (
+            posts.map((post) => (
+              <article
+                key={post.slug}
+                className="flex flex-col md:flex-row gap-6 md:gap-8 items-start"
+              >
+                {/* Cover Image - Fixed width, maintains aspect ratio */}
+                <div className="flex-shrink-0 w-full md:w-64">
+                  <Image
+                    src={post.coverImage}
+                    alt={post.title}
+                    width={256}
+                    height={144}
+                    className="w-full h-auto"
+                  />
+                </div>
 
-              {/* Content */}
-              <div className="flex-grow">
-                <time className="text-sm text-gray-400">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
-                <h2 className="text-xl md:text-2xl font-bold mt-2 mb-3 text-white">
-                  {post.title}
-                </h2>
-                <p className="text-gray-300 mb-4 text-sm md:text-base">
-                  {post.excerpt}
-                </p>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="inline-block text-blue-400 hover:text-blue-300 hover:underline"
-                >
-                  Read more
-                </Link>
-              </div>
-            </article>
-          ))}
+                {/* Content */}
+                <div className="flex-grow">
+                  <time className="text-sm text-gray-400">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <h2 className="text-xl md:text-2xl font-bold mt-2 mb-3 text-white">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-300 mb-4 text-sm md:text-base">
+                    {post.excerpt}
+                  </p>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-block text-blue-400 hover:text-blue-300 hover:underline"
+                  >
+                    Read more
+                  </Link>
+                </div>
+              </article>
+            ))
+          )}
         </div>
       </div>
     </div>

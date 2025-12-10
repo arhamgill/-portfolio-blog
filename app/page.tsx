@@ -265,11 +265,19 @@ export default function Home() {
                 </a>
                 <span className="text-gray-400">• 2024 - Present</span>
               </div>
-              <p className="text-gray-300">
+              <p className="text-gray-300 mb-3">
                 I work on fiverr as a full stack web devloper building diverse
                 websites for my clinets. I have gained expertise in building
                 websites from scratch and debugging.
               </p>
+              <a
+                href="https://www.fiverr.com/arhamgill92"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 hover:underline text-sm"
+              >
+                Visit my Fiverr profile →
+              </a>
             </div>
             <div className="bg-slate-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-white mb-2">
@@ -369,7 +377,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                   >
-                    Live Demo
+                    Live Website
                   </a>
                 </div>
               </div>
@@ -416,14 +424,14 @@ export default function Home() {
                   >
                     GitHub
                   </a>
-                  <a
+                  {/* <a
                     href="https://ecommerce-sanity-seven-iota.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                   >
                     Live Demo
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
