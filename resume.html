@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arham Gill - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #000;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        @media print {
+            body {
+                padding: 0.3in;
+            }
+            @page {
+                margin: 0;
+            }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 6px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 0px;
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .header .title {
+            font-size: 17px;
+            color: #000;
+            margin-bottom: 6px;
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            color: #000;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a {
+            color: inherit;
+        }
+        
+        @media print {
+            a[href]:after {
+                content: none;
+            }
+        }
+        
+        .section {
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 900;
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .education-item, .experience-item, .project-item {
+            margin-bottom: 10px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: #000;
+        }
+        
+        .item-date {
+            font-size: 12px;
+            color: #000;
+            font-style: italic;
+        }
+        
+        .item-subtitle {
+            font-size: 13px;
+            color: #000;
+            margin-bottom: 3px;
+        }
+        
+        .item-description {
+            font-size: 12px;
+            color: #000;
+            line-height: 1.4;
+            margin-left: 0;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 6px;
+        }
+        
+        .skill-category {
+            font-size: 12px;
+        }
+        
+        .skill-category-name {
+            font-weight: bold;
+            color: #000;
+            margin-right: 8px;
+        }
+        
+        .skill-items {
+            color: #000;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+        
+        .project-link {
+            color: #0066cc;
+            font-size: 11px;
+            text-decoration: none;
+        }
+        
+        .project-tech {
+            font-size: 11px;
+            color: #000;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ARHAM GILL</h1>
+        <div class="title">Full Stack Web Developer</div>
+        <div class="contact-info">
+            <div>+92 334 8539681 | arhamgill.dev@gmail.com</div>
+            <div><a href="https://arhamgill.com">https://arhamgill.com</a> | <a href="https://linkedin.com/in/arhamgilldev">https://linkedin.com/in/arhamgilldev</a> | <a href="https://github.com/arhamgill">https://github.com/arhamgill</a></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="education-item">
+            <div class="item-header">
+                <div class="item-title">BS Computer Science</div>
+                <div class="item-date">2022 - 2026</div>
+            </div>
+            <div class="item-subtitle">University of Engineering and Technology (UET), Taxila | CGPA: 3.54/4.0</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Summary</div>
+        <div class="item-description">
+            Full-stack web developer with expertise in modern web technologies. Strong problem-solving skills with ability to quickly learn and adapt to new tools and frameworks.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <span class="skill-category-name">Languages:</span>
+                <span class="skill-items">JavaScript, TypeScript, Python</span>
+            </div>
+            <div class="skill-category">
+                <span class="skill-category-name">Frameworks & Libraries:</span>
+                <span class="skill-items">React, Node.js, Next.js, Express, Django</span>
+            </div>
+            <div class="skill-category">
+                <span class="skill-category-name">Databases:</span>
+                <span class="skill-items">PostgreSQL, MongoDB, Supabase, Convex, Sanity</span>
+            </div>
+            <div class="skill-category">
+                <span class="skill-category-name">Tools & Platforms:</span>
+                <span class="skill-items">Docker, AWS, Vercel, Render, Stripe, Git</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+        
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title"><strong>Fiverr</strong> - Freelance Full Stack Developer</div>
+                <div class="item-date">2024 - Present</div>
+            </div>
+            <div class="item-description">
+                Building diverse websites for clients as a full-stack web developer. Gained expertise in building websites from scratch and debugging complex issues while delivering custom web solutions using modern technologies.
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title"><strong>Meta Wibe</strong> - Junior Web Developer</div>
+                <div class="item-date">May 2025 - August 2025</div>
+            </div>
+            <div class="item-description">
+                Contributed to multiple ongoing projects during summer internship. Strengthened web development skills through hands-on experience and collaborated with team members on various client projects.
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title"><strong>Exytex Technologies</strong> - React Developer Intern</div>
+                <div class="item-date">June 2024 - August 2024</div>
+            </div>
+            <div class="item-description">
+                Completed internship focused on React development and modern web practices. Gained foundational experience and learned industry best practices and collaborative development workflows.
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Projects</div>
+        <div class="projects-grid">
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Manhattan Suites NYC</div>
+                    <a href="https://manhattansuites.nyc/" class="project-link">manhattansuites.nyc</a>
+                </div>
+                <div class="item-description">
+                    Interactive UI for browsing Manhattan hotels with Guesty API integration, quotation and booking features built with Next.js, Guesty API, and Supabase.
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">E-commerce Platform</div>
+                    <a href="https://github.com/arhamgill/ecommerce_sanity_website" class="project-link">GitHub Repository</a>
+                </div>
+                <div class="item-description">
+                    Full-featured e-commerce application with real-time state management, payment processing, and content management built with Next.js, Stripe, Sanity CMS, Clerk, and Zustand.
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Real-time Chat Application</div>
+                    <div class="item-date">Client Project</div>
+                </div>
+                <div class="item-description">
+                    Real-time chat application with instant messaging and media sharing capabilities built with MERN Stack, Socket.io, and Cloudinary.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
